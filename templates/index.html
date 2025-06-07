@@ -1,0 +1,90 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="container mt-4">
+    <h1 class="mb-4">O que é Python?</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Uma Linguagem de Programação Versátil</h3>
+        </div>
+        <div class="card-body">
+            <p><strong>Python</strong> é uma das linguagens de programação mais populares e versáteis do mundo. Criada com foco na legibilidade do código e simplicidade, ela permite que desenvolvedores expressem ideias complexas em poucas linhas, tornando-a ideal para iniciantes e profissionais experientes.</p>
+            <p>Sua popularidade vem da sua capacidade de ser usada em diversas áreas, desde desenvolvimento web e análise de dados até inteligência artificial e automação.</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>A História do Python: Da Origem à Onipresença</h3>
+        </div>
+        <div class="card-body">
+            <p>O Python foi criado por Guido van Rossum no final dos anos 1980, no Centrum Wiskunde & Informatica (CWI) na Holanda, como um sucessor da linguagem ABC. Van Rossum buscava uma linguagem que fosse fácil de usar, expressiva e poderosa, mas sem as complexidades de linguagens como C ou Pascal.</p>
+            <p>O nome "Python" foi inspirado no grupo humorístico britânico Monty Python, do qual Guido era fã, e não na cobra. A primeira versão oficial, Python 0.9.0, foi lançada em 1991, marcando o início de uma jornada que levaria a linguagem a se tornar uma das mais influentes do século XXI.</p>
+            <p>Ao longo dos anos, o Python evoluiu através de várias versões significativas, como a Python 2.x (que dominou por muitos anos e ainda é encontrada em sistemas legados) e a transição para a Python 3.x em 2008, que trouxe melhorias e uma base mais limpa para o futuro da linguagem. Hoje, o Python 3.x é a versão padrão e ativa, com uma comunidade vibrante e um ecossistema de bibliotecas e frameworks vastíssimo.</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplos Fundamentais de Código Python</h3>
+        </div>
+        <div class="card-body">
+            <p>Vamos explorar alguns dos conceitos mais básicos e amplamente usados em Python:</p>
+
+            <h5 class="mt-4">1. Saída de Dados: A Função <code>print()</code></h5>
+            <p>A função <code>print()</code> é fundamental para exibir informações na tela (console). É a primeira coisa que muitos aprendem em Python.</p>
+            <pre class="language-python"><code><span class="python-built-in">print</span>(<span class="python-string">"Olá, Mundo!"</span>) <span class="python-comentario"># Exibe a string "Olá, Mundo!"</span>
+<span class="python-variavel">nome</span> = <span class="python-string">"Python"</span>
+<span class="python-built-in">print</span>(<span class="python-string">f"Bem-vindo ao {nome}!"</span>) <span class="python-comentario"># Exibe uma string formatada</span></code></pre>
+
+            <h5 class="mt-4">2. Variáveis e Tipos de Dados</h5>
+            <p>Variáveis são usadas para armazenar valores. Python é dinamicamente tipado, o que significa que você não precisa declarar o tipo da variável.</p>
+            <pre class="language-python"><code><span class="python-variavel">idade</span> = <span class="python-numero">30</span>              <span class="python-comentario"># Inteiro</span>
+<span class="python-variavel">altura</span> = <span class="python-numero">1.75</span>             <span class="python-comentario"># Ponto flutuante</span>
+<span class="python-variavel">nome_completo</span> = <span class="python-string">"Ana Silva"</span>  <span class="python-comentario"># String</span>
+<span class="python-variavel">is_estudante</span> = <span class="python-keyword">True</span>     <span class="python-comentario"># Booleano</span>
+
+<span class="python-built-in">print</span>(<span class="python-variavel">idade</span>)
+<span class="python-built-in">print</span>(<span class="python-variavel">nome_completo</span>)</code></pre>
+
+            <h5 class="mt-4">3. Condicionais: <code>if</code>, <code>elif</code>, <code>else</code></h5>
+            <p>Permitem que seu programa tome decisões com base em condições. O código só será executado se uma condição for verdadeira.</p>
+            <pre class="language-python"><code><span class="python-variavel">nota</span> = <span class="python-numero">75</span>
+
+<span class="python-keyword">if</span> <span class="python-variavel">nota</span> <span class="python-operador">>=</span> <span class="python-numero">70</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Aprovado!"</span>)
+<span class="python-keyword">elif</span> <span class="python-variavel">nota</span> <span class="python-operador">>=</span> <span class="python-numero">50</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Recuperação."</span>)
+<span class="python-keyword">else</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Reprovado."</span>)</code></pre>
+
+            <h5 class="mt-4">4. Laços de Repetição: <code>for</code> e <code>while</code></h5>
+            <p>Usados para executar um bloco de código repetidamente. O <code>for</code> é ótimo para iterar sobre sequências, e o <code>while</code> para repetir enquanto uma condição for verdadeira.</p>
+            <h6>Exemplo com <code>for</code>:</h6>
+            <pre class="language-python"><code><span class="python-variavel">frutas</span> = [<span class="python-string">"maçã"</span>, <span class="python-string">"banana"</span>, <span class="python-string">"cereja"</span>]
+<span class="python-keyword">for</span> <span class="python-variavel">fruta</span> <span class="python-keyword">in</span> <span class="python-variavel">frutas</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">f"Eu gosto de {fruta}."</span>)
+
+<span class="python-comentario"># Loop com range (para um número específico de repetições)</span>
+<span class="python-keyword">for</span> <span class="python-variavel">i</span> <span class="python-keyword">in</span> <span class="python-built-in">range</span>(<span class="python-numero">5</span>): <span class="python-comentario"># Repete 5 vezes (0 a 4)</span>
+    <span class="python-built-in">print</span>(<span class="python-string">f"Contagem: {i + 1}"</span>)</code></pre>
+            <h6>Exemplo com <code>while</code>:</h6>
+            <pre class="language-python"><code><span class="python-variavel">contador</span> = <span class="python-numero">0</span>
+<span class="python-keyword">while</span> <span class="python-variavel">contador</span> <span class="python-operador">&lt;</span> <span class="python-numero">3</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">f"Contador é {contador}"</span>)
+    <span class="python-variavel">contador</span> <span class="python-operador">+=</span> <span class="python-numero">1</span> <span class="python-comentario"># Equivalente a contador = contador + 1</span></code></pre>
+
+            <h5 class="mt-4">5. Funções</h5>
+            <p>Funções são blocos de código reutilizáveis que realizam uma tarefa específica. Elas ajudam a organizar o código e torná-lo mais modular.</p>
+            <pre class="language-python"><code><span class="python-keyword">def</span> <span class="python-variavel">saudar</span>(<span class="python-variavel">nome</span>):
+    <span class="python-comentario">"""Esta função cumprimenta uma pessoa."""</span>
+    <span class="python-built-in">print</span>(<span class="python-string">f"Olá, {nome}!"</span>)
+
+<span class="python-variavel">saudar</span>(<span class="python-string">"Maria"</span>)   <span class="python-comentario"># Chama a função</span>
+<span class="python-variavel">saudar</span>(<span class="python-string">"João"</span>)</code></pre>
+        </div>
+    </div>
+
+    <a href="/sobre-equipe" class="btn btn-primary mt-3">Próxima página: Sobre a Equipe</a>
+</div>
+{% endblock %}

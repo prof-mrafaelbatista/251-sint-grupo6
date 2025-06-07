@@ -1,0 +1,44 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="container mt-4"> {# Adiciona um container e margem superior #}
+    <h1 class="mb-4 text-center">Nossa Equipe</h1> {# Título centralizado para a página #}
+
+    <div class="row row-cols-1 row-cols-md-3 g-4"> {# row-cols-md-3 para 3 colunas em telas médias+ #}
+        {# CARD 1: Exemplo com seus dados #}
+        <div class="col">
+            <div class="card h-100"> {# h-100 garante que todos os cards tenham a mesma altura #}
+                <div class="card-body text-center">
+                    <h5 class="card-title">Marcelo Filho</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Estudante de Ciências da Computação</h6>
+                    <p class="card-text">Dedicado a fortalecer defesas digitais e investigar ameaças, garantindo a integridade e a segurança de dados e sistemas.</p>
+                    <a href="https://www.instagram.com/marcelo.gsf/" class="card-link btn btn-outline-primary mt-2">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        {# CARD 2: Exemplo para o segundo membro #}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Filipe Lins</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Estudante de Sistemas para Internet</h6>
+                    <p class="card-text">Apaixonado por desvendar padrões em dados complexos, com foco em otimizar processos e impulsionar decisões estratégicas.</p>
+                    <a href="https://www.instagram.com/filipe.lins_/" class="card-link btn btn-outline-primary mt-2">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        {# CARD 3: Exemplo para o terceiro membro #}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Riann Lima</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Estudante de Sistemas para Internet</h6>
+                    <p class="card-text">Com um olhar apurado para o design e a usabilidade, dedicada a transformar ideias em interfaces intuitivas e visualmente impactantes.</p>
+                    <a href="https://www.instagram.com/rianncl_/" class="card-link btn btn-outline-primary mt-2">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

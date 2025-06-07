@@ -1,0 +1,83 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="container mt-4">
+    <h1>Estruturas de Repetição em Python</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Conceito</h3>
+        </div>
+        <div class="card-body">
+            <p>As estruturas de repetição (ou laços, loops) permitem que um bloco de código seja executado múltiplas vezes. Elas são essenciais quando você precisa repetir uma ação sem ter que escrever o mesmo código várias vezes. As principais estruturas de repetição em Python são <code>for</code> e <code>while</code>.</p>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Aplicação</h3>
+        </div>
+        <div class="card-body">
+            <p>Estruturas de repetição são usadas para:</p>
+            <ul>
+                <li>Iterar sobre Coleções: Percorrer itens de listas, tuplas, strings ou dicionários.</li>
+                <li>Processamento Contínuo: Executar uma ação repetidamente até que uma condição específica seja satisfeita (ex: um menu que continua até o usuário digitar 'sair').</li>
+                <li>Cálculos Iterativos: Realizar operações que exigem repetição (ex: somar todos os números em uma faixa).</li>
+                <li>Automação: Automatizar tarefas repetitivas.</li>
+             </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+    <h3>Exemplos de Código</h3>
+        </div>
+        <div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplo 1: Estrutura <code>for</code> (Iterando em uma lista)</h3>
+        <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-variavel">frutas</span> = [<span class="python-string">"maçã"</span>, <span class="python-string">"banana"</span>, <span class="python-string">"cereja"</span>]
+
+<span class="python-keyword">for</span> <span class="python-variavel">fruta</span> <span class="python-keyword">in</span> <span class="python-variavel">frutas</span>:
+    <span class="python-built-in">print</span>(<span class="python-variavel">fruta</span>)
+        </code></pre>
+    </div>
+    <p>Este laço <code>for</code> percorre cada item da lista <code>frutas</code> e imprime o nome de cada uma.</p>
+     </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplo 2: Estrutura <code>for</code> (Usando <code>range()</code>)</h3>
+        <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-comentario"># Imprime números de 0 a 4</span>
+<span class="python-keyword">for</span> <span class="python-variavel">i</span> <span class="python-keyword">in</span> <span class="python-built-in">range</span>(<span class="python-numero">5</span>):
+    <span class="python-built-in">print</span>(<span class="python-variavel">i</span>)
+        </code></pre>
+    </div>
+    <p>A função <code>range()</code> é comum para gerar sequências de números, ideal para laços baseados em contagem.</p>
+     </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplo 3: Estrutura <code>while</code></h3>
+        <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-variavel">contador</span> = <span class="python-numero">0</span>
+
+<span class="python-keyword">while</span> <span class="python-variavel">contador</span> <span class="python-operador">&lt;</span> <span class="python-numero">3</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Contagem:"</span>, <span class="python-variavel">contador</span>)
+    <span class="python-variavel">contador</span> <span class="python-operador">+=</span> <span class="python-numero">1</span> <span class="python-comentario"># Incrementa o contador</span>
+        </code></pre>
+    </div>
+    <p>O laço <code>while</code> continua executando enquanto sua condição (<code>contador &lt; 3</code>) for verdadeira. É crucial garantir que a condição eventualmente se torne falsa para evitar um loop infinito.</p>
+     </div>
+    </div>
+</div>
+{% endblock %}

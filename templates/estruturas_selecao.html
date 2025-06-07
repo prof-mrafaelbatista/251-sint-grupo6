@@ -1,0 +1,77 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="container mt-4">
+    <h1 class="mb-4">Estruturas de Seleção em Python</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Conceito</h3>
+        </div>
+        <div class="card-body">
+            <p>As estruturas de seleção (ou condicionais) permitem que um programa tome decisões e execute diferentes blocos de código com base em condições. Elas avaliam uma expressão lógica (que resulta em verdadeiro ou falso) e, dependendo do resultado, escolhem qual caminho seguir no fluxo do programa. As principais estruturas são `if`, `if-else` e `if-elif-else`.</p>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Aplicação</h3>
+        </div>
+        <div class="card-body">
+            <p>Estruturas de seleção são amplamente utilizadas para:</p>
+            <ul>
+                <li>Validação de Dados: Verificar se a entrada do usuário é válida (ex: um número está dentro de um intervalo).</li>
+                <li>Controle de Fluxo: Direcionar o programa para diferentes funcionalidades com base em escolhas do usuário ou estados do sistema.</li>
+                <li>Lógica de Negócios: Implementar regras e condições que definem o comportamento do programa (ex: calcular desconto com base no valor da compra).</li>
+                <li>Segurança: Autenticar usuários ou verificar permissões de acesso.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplos de Código</h3>
+        </div>
+        <div class="card-body">
+
+            <h4>Exemplo 1: Estrutura <code>if</code> simples</h4>
+            <div class="card bg-dark text-white p-3 mb-3">
+                <pre><code class="language-python">
+<span class="python-variavel">idade</span> = <span class="python-numero">18</span>
+
+<span class="python-keyword">if</span> <span class="python-variavel">idade</span> <span class="python-operador">>=</span> <span class="python-numero">18</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Você é maior de idade."</span>)
+                </code></pre>
+            </div>
+            <p>Neste exemplo, a mensagem "Você é maior de idade." só será exibida se a condição <code class="language-python">idade >= 18</code> for verdadeira.</p>
+
+            <h4 class="mt-4">Exemplo 2: Estrutura <code>if-else</code></h4>
+            <div class="card bg-dark text-white p-3 mb-3">
+                <pre><code class="language-python">
+<span class="python-variavel">numero</span> = <span class="python-numero">10</span>
+
+<span class="python-keyword">if</span> <span class="python-variavel">numero</span> <span class="python-operador">%</span> <span class="python-numero">2</span> <span class="python-operador">==</span> <span class="python-numero">0</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"O número é par."</span>)
+<span class="python-keyword">else</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"O número é ímpar."</span>)
+                </code></pre>
+            </div>
+            <p>Aqui, o programa verifica se o número é par. Se for, executa o bloco <code>if</code>; caso contrário, executa o bloco <code>else</code>.</p>
+
+            <h4 class="mt-4">Exemplo 3: Estrutura <code>if-elif-else</code></h4>
+            <div class="card bg-dark text-white p-3 mb-3">
+                <pre><code class="language-python">
+<span class="python-variavel">nota</span> = <span class="python-numero">75</span>
+
+<span class="python-keyword">if</span> <span class="python-variavel">nota</span> <span class="python-operador">>=</span> <span class="python-numero">90</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Conceito A"</span>)
+<span class="python-keyword">elif</span> <span class="python-variavel">nota</span> <span class="python-operador">>=</span> <span class="python-numero">80</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Conceito B"</span>)
+<span class="python-keyword">elif</span> <span class="python-variavel">nota</span> <span class="python-operador">>=</span> <span class="python-numero">70</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Conceito C"</span>)
+<span class="python-keyword">else</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Conceito D"</span>)
+                </code></pre>
+            </div>
+            <p>Este exemplo demonstra múltiplos caminhos. O programa verifica as condições em ordem e executa o primeiro bloco cuja condição é verdadeira. Se nenhuma das condições <code>if</code> ou <code>elif</code> for verdadeira, o bloco <code>else</code> é executado.</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

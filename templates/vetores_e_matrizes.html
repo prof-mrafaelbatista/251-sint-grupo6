@@ -1,0 +1,90 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="container mt-4">
+    <h1 class="mb-4">Vetores e Matrizes em Python</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Conceito</h3>
+        </div>
+        <div class="card-body">
+            <p>Em Python, o conceito de vetores e matrizes é geralmente implementado usando listas. Uma lista pode ser usada como um vetor (uma coleção linear de itens) e uma lista de listas pode representar uma matriz (uma estrutura bidimensional). Embora Python não tenha tipos nativos como "array" ou "matrix" no sentido de outras linguagens (como C++ ou Java), suas listas são flexíveis o suficiente para simular essas estruturas.</p>
+            <ul>
+                <li>Vetor (Lista Simples): Uma sequência ordenada e mutável de itens. Pode conter diferentes tipos de dados.</li>
+                <li>Matriz (Lista de Listas): Uma lista onde cada elemento é, por sua vez, outra lista, formando linhas e colunas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Aplicação</h3>
+        </div>
+        <div class="card-body">
+            <p>Vetores e matrizes (listas) são usados para:</p>
+            <ul>
+                <li>Armazenamento de Dados: Organizar coleções de dados relacionados (ex: nomes de alunos, temperaturas diárias).</li>
+                <li>Processamento de Dados Tabulares: Representar tabelas, como dados de planilhas ou bancos de dados (para matrizes).</li>
+                <li>Gráficos e Imagens: Representar pixels de imagens ou dados para gráficos.</li>
+                <li>Algoritmos: Implementar algoritmos que operam em coleções de dados, como busca, ordenação ou operações matriciais (com bibliotecas como NumPy).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+        <h3>Exemplos de Código</h3>
+        </div>
+        <div>
+        </div>
+    </div>
+
+       <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplo 1: Criação e Acesso a um Vetor (Lista)</h3>
+        <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-comentario"># Criando um vetor (lista) de números</span>
+<span class="python-variavel">numeros</span> = [<span class="python-numero">10</span>, <span class="python-numero">20</span>, <span class="python-numero">30</span>, <span class="python-numero">40</span>, <span class="python-numero">50</span>]
+
+<span class="python-comentario"># Acessando elementos (índices começam em 0)</span>
+<span class="python-built-in">print</span>(<span class="python-string">"Primeiro elemento:"</span>, <span class="python-variavel">numeros</span>[<span class="python-numero">0</span>])
+<span class="python-built-in">print</span>(<span class="python-string">"Terceiro elemento:"</span>, <span class="python-variavel">numeros</span>[<span class="python-numero">2</span>])
+
+<span class="python-comentario"># Alterando um elemento</span>
+<span class="python-variavel">numeros</span>[<span class="python-numero">1</span>] = <span class="python-numero">25</span>
+<span class="python-built-in">print</span>(<span class="python-string">"Lista após alteração:"</span>, <span class="python-variavel">numeros</span>)
+        </code></pre>
+    </div>
+    <p>Listas são mutáveis, o que significa que seus elementos podem ser alterados após a criação.</p>
+     </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplo 2: Criação e Acesso a uma Matriz (Lista de Listas)</h3>
+        <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-comentario"># Criando uma matriz 3x3</span>
+<span class="python-variavel">matriz</span> = [
+    [<span class="python-numero">1</span>, <span class="python-numero">2</span>, <span class="python-numero">3</span>],
+    [<span class="python-numero">4</span>, <span class="python-numero">5</span>, <span class="python-numero">6</span>],
+    [<span class="python-numero">7</span>, <span class="python-numero">8</span>, <span class="python-numero">9</span>]
+]
+
+<span class="python-comentario"># Acessando um elemento (linha, coluna)</span>
+<span class="python-built-in">print</span>(<span class="python-string">"Elemento na linha 0, coluna 1:"</span>, <span class="python-variavel">matriz</span>[<span class="python-numero">0</span>][<span class="python-numero">1</span>]) <span class="python-comentario"># Saída: 2</span>
+
+<span class="python-comentario"># Iterando sobre a matriz</span>
+<span class="python-keyword">for</span> <span class="python-variavel">linha</span> <span class="python-keyword">in</span> <span class="python-variavel">matriz</span>:
+    <span class="python-keyword">for</span> <span class="python-variavel">elemento</span> <span class="python-keyword">in</span> <span class="python-variavel">linha</span>:
+        <span class="python-built-in">print</span>(<span class="python-variavel">elemento</span>, <span class="python-built-in">end</span>=<span class="python-string">" "</span>)
+    <span class="python-built-in">print</span>() <span class="python-comentario"># Pula para a próxima linha</span>
+        </code></pre>
+    </div>
+    <p>Acessar elementos em uma matriz requer dois índices: um para a linha e outro para a coluna.</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

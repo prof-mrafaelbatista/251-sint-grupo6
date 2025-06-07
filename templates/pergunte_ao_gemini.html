@@ -1,0 +1,33 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+<div class="container mt-4">
+    <h1 class="mb-4">Pergunte ao Gemini</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Faça sua Pergunta</h3>
+        </div>
+        <div class="card-body">
+            <form action="/pergunte-ao-gemini" method="POST">
+                <div class="mb-3">
+                    <label for="pergunta" class="form-label">Digite sua pergunta para o Gemini:</label>
+                    <textarea class="form-control" id="pergunta" name="pergunta" rows="4" placeholder="Ex: Conte uma curiosidade sobre Python." required>{{ pergunta_anterior }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Perguntar ao Gemini</button>
+            </form>
+        </div>
+    </div>
+
+    {% if resposta %}
+    <div class="card mt-4">
+        <div class="card-header">
+            <h3>Resposta do Gemini</h3>
+        </div>
+        <div class="card-body">
+            <p>{{ resposta }}</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

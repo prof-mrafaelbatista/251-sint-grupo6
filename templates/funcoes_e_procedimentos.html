@@ -1,0 +1,104 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="container mt-4">
+    <h1 class="mb-4">Funções e Procedimentos em Python</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Conceito</h3>
+        </div>
+        <div class="card-body">
+            <p>Em programação, funções e procedimentos são blocos de código reutilizáveis que realizam uma tarefa específica. Em Python, ambos são implementados usando a palavra-chave <code>def</code>. A principal diferença conceitual é que uma função geralmente retorna um valor, enquanto um procedimento executa uma ação sem necessariamente retornar algo (embora em Python, uma função sem <code>return</code> explicitamente retorna <code>None</code>).</p>
+            <ul>
+                <li>Função: Um bloco de código nomeado que pode receber argumentos, realizar operações e retornar um valor.</li>
+                <li>Procedimento: Um bloco de código nomeado que pode receber argumentos e realizar uma ação, mas **não retorna um valor** (ou retorna <code>None</code> implicitamente).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+          <h3>Aplicação</h3>
+        </div>
+        <div class="card-body">
+            <p>Funções e procedimentos são fundamentais para:</p>
+            <ul>
+                <li>Reutilização de Código: Evitar a repetição de código, tornando o programa mais conciso e fácil de manter.</li>
+                <li>Modularização: Dividir um programa grande em partes menores e mais gerenciáveis.</li>
+                <li>Abstração: Esconder os detalhes complexos de uma operação, permitindo que o programador se concentre no "o quê" em vez do "como".</li>
+                <li>Organização: Estruturar o código de forma lógica e legível.</li>
+                <li>Testabilidade: Facilitar o teste de partes individuais do programa.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+        <div class="card-header">
+          <h3>Exemplos de Código</h3>
+        </div>
+        </div>
+
+    <div class="card mb-4">
+        <div class="card-header"
+
+    <h3>Exemplo 1: Função Simples (com retorno)</h3>
+    <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-keyword">def</span> <span class="python-variavel">saudar</span>(<span class="python-variavel">nome</span>):
+    <span class="python-comentario">"Esta função retorna uma saudação personalizada."</span>
+    <span class="python-keyword">return</span> <span class="python-string">"Olá, "</span> <span class="python-operador">+</span> <span class="python-variavel">nome</span> <span class="python-operador">+</span> <span class="python-string">"!"</span>
+
+<span class="python-variavel">mensagem</span> = <span class="python-variavel">saudar</span>(<span class="python-string">"Alice"</span>)
+<span class="python-built-in">print</span>(<span class="python-variavel">mensagem</span>)
+
+<span class="python-built-in">print</span>(<span class="python-variavel">saudar</span>(<span class="python-string">"Bob"</span>))
+        </code></pre>
+    </div>
+    <p>A função <code>saudar</code> recebe um argumento <code>nome</code> e retorna uma string formatada.</p>
+    </div>
+    </div>
+
+    <div class="card mb-4">
+         <div class="card-header">
+    <h3>Exemplo 2: Procedimento (sem retorno explícito)</h3>
+    <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-keyword">def</span> <span class="python-variavel">mostrar_informacao</span>(<span class="python-variavel">produto</span>, <span class="python-variavel">preco</span>):
+    <span class="python-comentario">"Este procedimento imprime informações sobre um produto."</span>
+    <span class="python-built-in">print</span>(<span class="python-string">"Produto:"</span>, <span class="python-variavel">produto</span>)
+    <span class="python-built-in">print</span>(<span class="python-string">"Preço:"</span>, <span class="python-variavel">preco</span>)
+
+<span class="python-variavel">mostrar_informacao</span>(<span class="python-string">"Livro"</span>, <span class="python-numero">49.90</span>)
+<span class="python-built-in">print</span>(<span class="python-string">"\nOutro produto:"</span>)
+<span class="python-variavel">mostrar_informacao</span>(<span class="python-string">"Caneta"</span>, <span class="python-numero">2.50</span>)
+        </code></pre>
+    </div>
+    <p>O procedimento <code>mostrar_informacao</code> executa a ação de imprimir, mas não retorna nenhum valor para quem o chamou.</p>
+    </div>
+    </div>
+
+    <div class="card mb-4">
+         <div class="card-header">
+    <h3>Exemplo 3: Função com múltiplos argumentos e condicional</h3>
+    <div class="card bg-dark text-white p-3 mb-3">
+        <pre><code class="language-python">
+<span class="python-keyword">def</span> <span class="python-variavel">calcular_media</span>(<span class="python-variavel">n1</span>, <span class="python-variavel">n2</span>, <span class="python-variavel">n3</span>):
+    <span class="python-comentario">"Calcula a média de três notas e retorna o status."</span>
+    <span class="python-variavel">media</span> = (<span class="python-variavel">n1</span> <span class="python-operador">+</span> <span class="python-variavel">n2</span> <span class="python-operador">+</span> <span class="python-variavel">n3</span>) <span class="python-operador">/</span> <span class="python-numero">3</span>
+    <span class="python-built-in">print</span>(<span class="python-string">"Média:"</span>, <span class="python-variavel">media</span>)
+    <span class="python-keyword">if</span> <span class="python-variavel">media</span> <span class="python-operador">>=</span> <span class="python-numero">7</span>:
+        <span class="python-keyword">return</span> <span class="python-string">"Aprovado"</span>
+    <span class="python-keyword">else</span>:
+        <span class="python-keyword">return</span> <span class="python-string">"Reprovado"</span>
+
+<span class="python-variavel">status_aluno1</span> = <span class="python-variavel">calcular_media</span>(<span class="python-numero">8</span>, <span class="python-numero">7</span>, <span class="python-numero">9</span>)
+<span class="python-built-in">print</span>(<span class="python-string">"Aluno 1:"</span>, <span class="python-variavel">status_aluno1</span>)
+
+<span class="python-variavel">status_aluno2</span> = <span class="python-variavel">calcular_media</span>(<span class="python-numero">5</span>, <span class="python-numero">6</span>, <span class="python-numero">4</span>)
+<span class="python-built-in">print</span>(<span class="python-string">"Aluno 2:"</span>, <span class="python-variavel">status_aluno2</span>)
+        </code></pre>
+    </div>
+    <p>Funções podem combinar lógica condicional e retornar resultados baseados nela.</p>
+          </div>
+            </div>
+{% endblock %}

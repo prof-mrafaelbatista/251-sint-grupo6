@@ -1,0 +1,76 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+<div class="container mt-4">
+    <h1 class="mb-4">Tratamentos de Exceção em Python</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Conceito</h3>
+        </div>
+        <div class="card-body">
+            <p>Tratamento de exceções é um mecanismo em Python (e em muitas outras linguagens de programação) que permite que você lide com erros ou eventos inesperados que ocorrem durante a execução de um programa, sem que ele pare abruptamente. Em vez de "quebrar", o programa pode "capturar" a exceção e executar um código específico para lidar com ela, garantindo uma experiência mais robusta e amigável para o usuário.</p>
+            <p>Os blocos principais para tratamento de exceções são:</p>
+            <ul>
+                <li><strong><code>try</code>:</strong> Onde você coloca o código que pode gerar uma exceção.</li>
+                <li><strong><code>except</code>:</strong> Onde você especifica o tipo de exceção a ser capturada e o código a ser executado caso essa exceção ocorra.</li>
+                <li><strong><code>else</code>:</strong> (Opcional) O código aqui é executado se nenhuma exceção ocorrer no bloco <code>try</code>.</li>
+                <li><strong><code>finally</code>:</strong> (Opcional) O código aqui é sempre executado, ocorrendo ou não uma exceção. É útil para tarefas de limpeza, como fechar arquivos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Aplicação</h3>
+        </div>
+        <div class="card-body">
+            <p>O tratamento de exceções é fundamental para criar aplicações mais seguras e confiáveis. Ele é aplicado em diversas situações, como:</p>
+            <ul>
+                <li><strong>Validação de entrada de usuário:</strong> Para garantir que o usuário insira dados no formato correto (ex: um número quando um número é esperado).</li>
+                <li><strong>Operações de arquivo:</strong> Para lidar com casos onde um arquivo não existe, não pode ser lido ou está corrompido.</li>
+                <li><strong>Conexões de rede/banco de dados:</strong> Para gerenciar falhas de conexão ou problemas de comunicação.</li>
+                <li><strong>Divisão por zero:</strong> Evitar erros matemáticos.</li>
+                <li><strong>Acessos a índices inválidos em listas/arrays:</strong> Prevenir erros ao tentar acessar uma posição que não existe.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Exemplo de Código</h3>
+        </div>
+        <div class="card-body">
+            <p>Considere o exemplo de um programa que pede ao usuário para inserir dois números e realizar uma divisão:</p>
+            <pre class="language-python"><code><span class="python-keyword">try</span>:
+    <span class="python-variavel">num1_str</span> = <span class="python-built-in">input</span>(<span class="python-string">"Digite o primeiro número: "</span>)
+    <span class="python-variavel">num2_str</span> = <span class="python-built-in">input</span>(<span class="python-string">"Digite o segundo número: "</span>)
+
+    <span class="python-variavel">num1</span> = <span class="python-built-in">float</span>(<span class="python-variavel">num1_str</span>)
+    <span class="python-variavel">num2</span> = <span class="python-built-in">float</span>(<span class="python-variavel">num2_str</span>)
+
+    <span class="python-variavel">resultado</span> = <span class="python-variavel">num1</span> <span class="python-operador">/</span> <span class="python-variavel">num2</span>
+    <span class="python-built-in">print</span>(<span class="python-string">f"O resultado da divisão é: {resultado}"</span>)
+
+<span class="python-keyword">except</span> <span class="python-built-in">ValueError</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Erro: Entrada inválida. Por favor, digite apenas números."</span>)
+<span class="python-keyword">except</span> <span class="python-built-in">ZeroDivisionError</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Erro: Não é possível dividir por zero."</span>)
+<span class="python-keyword">except</span> <span class="python-built-in">Exception</span> <span class="python-keyword">as</span> <span class="python-variavel">e</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">f"Ocorreu um erro inesperado: {e}"</span>)
+<span class="python-keyword">else</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Divisão realizada com sucesso!"</span>)
+<span class="python-keyword">finally</span>:
+    <span class="python-built-in">print</span>(<span class="python-string">"Fim do programa de divisão."</span>)</code></pre>
+            <p>Neste exemplo:</p>
+            <ul>
+                <li>O bloco <code>try</code> tenta converter as entradas para números e realizar a divisão.</li>
+                <li>Se a conversão falhar (por exemplo, se o usuário digitar texto), um <code>ValueError</code> é capturado.</li>
+                <li>Se o segundo número for zero, um <code>ZeroDivisionError</code> é capturado.</li>
+                <li>Um <code>Exception</code> genérico captura qualquer outro erro inesperado.</li>
+                <li>O bloco <code>else</code> é executado apenas se nenhuma exceção ocorrer.</li>
+                <li>O bloco <code>finally</code> é sempre executado, independentemente de erro ou não.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
